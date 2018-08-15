@@ -20,6 +20,10 @@ The scene files are saved in the scene_files folder. My favorite scene is,
 pretty_ball_on_a_plane.txt, I think it shows off the best parts of this
 RayTracer.
 
+Here's a lower res render of that scene: 
+
+![alt text]https://github.com/TRON-N/RayTracer/blob/master/pretty_ball_on_a_plane.bmp
+
 This program has been tested on OSX, and Ubuntu.
 
 Once and image has been displayed, you can save it by pressing the s key on the
