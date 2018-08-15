@@ -2,11 +2,13 @@
 
 This is a re-upload of our WeThinkCode RayTracer project from 2017.
 
-I wrote most of the RayTracer logic, and Alex Coetzee, my team mate for the
-wrote file reading logic.
+I wrote most of the RayTracer logic, and Alex Coetzee, my teammate for the
+project wrote file reading logic.
 
-The reason why I re-uploaded this project, is because it was hoseted in a
-private repo on Alex's gitHub.
+The reason why I re-uploaded this project, is because it was hosted in a
+private repo on Alex's GitHub.
+
+Alex’s GitHub is : https://github.com/AlexCoetzee
 
 To compile the program, you need SDL2, and Make installed on the system, then 
 you simply run make all. Once the program has been compiled, you can run it
