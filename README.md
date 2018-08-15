@@ -22,7 +22,7 @@ RayTracer.
 
 Here's a lower res render of that scene: 
 
-![alt text]https://github.com/TRON-N/RayTracer/blob/master/pretty_ball_on_a_plane.bmp
+![PrettyBallOnAPlane](pretty_ball_on_a_plane.bmp)
 
 This program has been tested on OSX, and Ubuntu.
 
