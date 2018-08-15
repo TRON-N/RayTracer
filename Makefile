@@ -108,12 +108,10 @@ SRCS			:=	$(CORE_FUNCTIONS)			\
 				$(LIBOBJ)				\
 				$(READ_FILE)
 
-#ODIR			:=	obj
-OBJ			:=	${SRCS:.c=.o}
-#OBJ			:=	$(patsubst %,$(ODIR)/%,$(_OBJ))
+OBJ				:=	${SRCS:.c=.o}
 
 SDLFLAGS		:=	$(shell sdl2-config --libs)
-LINUXFLAGS		:=	-lm
+LINUXFLAGS		:=	-lm -pthread
 HEAD_FLAGS		:=	-I./librt -I./libobj -I./core_functions	\
 				-I./libft/includes -I./colour_system\
 				-I./file_reading \
@@ -122,6 +120,17 @@ HEAD_FLAGS		:=	-I./librt -I./libobj -I./core_functions	\
 LIBFT_FLAGS		:=	-L./libft -lft
 LIBFT			:=	libft/libft.a
 LIBFT_DEP		:=	libft/includes/libft.h libft/Makefile
+
+OS				:=	$(shell uname)
+
+ifeq ($(OS),Linux)
+	OBJFLAGS	:=	-O3 -Wall -Werror -Wextra $(HEAD_FLAGS) $(SDLFLAGS)\
+				$(LINUXFLAGS) $(LIBFT_FLAGS) 
+else
+	OBJFLAGS	:=	-O3 -Wall -Werror -Wextra $(HEAD_FLAGS) $(SDLFLAGS)\
+				$(LIBFT_FLAGS)  
+endif
+
 CFLAGS			:=	-O3 -Wall -Werror -Wextra $(HEAD_FLAGS)
 NAME			:=	RT 
 
@@ -130,7 +139,7 @@ all: $(NAME)
 %.o: %.c Makefile
 	clang $(CFLAGS) -c -o $@ $<
 $(NAME): $(OBJ) $(LIBFT)
-	clang $(OBJ) $(CFLAGS) $(SDLFLAGS) $(LIBFT_FLAGS) -o $(NAME)
+	clang $(OBJ) $(OBJFLAGS) -o $(NAME)
 $(LIBFT): $(LIBFT_DEP)
 	make -C ./libft
 .PHONY: fclean
