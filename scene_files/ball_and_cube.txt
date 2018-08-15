@@ -1,0 +1,74 @@
+options:
+fov: 51.52
+pix_height: 700
+pix_width: 1400
+aa: 4
+reflect_limit: 3
+camera_pos: 0 0 10
+camera_rot: 0 0 0
+
+look: 1
+diffuse_colour: 137 26 111
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 250
+specular_comp: 1
+reflect_comp: 0.3
+ior: 1
+transparent_comp: 0
+
+look: 2
+diffuse_colour: 56 82 230
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 28 172 225
+hardness: 250
+specular_comp: 0.1
+reflect_comp: 0
+ior: 0
+transparent_comp: 0
+
+light: distant
+area: 0 -1 0
+colour: 255 255 255
+intensity: 3
+
+light: distant
+area: -1 -1 -1
+colour: 255 255 255
+intensity: 10
+
+light: point
+area: -3 4 -7
+colour: 255 200 200
+intensity: 4000
+
+light: point
+area: 0.5 0.5 -13
+colour: 255 255 255
+intensity: 3500
+
+shape: cube
+position: 3 0 -15
+rotation: 0 0 0
+size: 1.5
+look_id: 2
+
+shape: sphere
+position: -4 -1 -15
+rotation: 90 90 90
+size: 1
+look_id: 1
+
+shape: plane
+position: 0 -2 -15
+rotation: 20 0 0
+size: 1
+look_id: 1
+
+light: distant
+area: 1 1 1
+colour: 255 255 255
+intensity: 2.0
+

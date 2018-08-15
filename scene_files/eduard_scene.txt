@@ -1,0 +1,130 @@
+options:
+fov: 51.52
+pix_height: 700
+pix_width: 1400
+aa: 4
+reflect_limit: 5
+camera_pos: 0 0 10
+camera_rot: 0 0 0
+ambient_light: 0.001
+background: 87 255 252
+greyscale: 0
+
+look: 1
+diffuse_colour: 137 26 111
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 250
+specular_comp: 1
+reflect_comp: 0.2
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+look: 3
+diffuse_colour: 82 59 51
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 51 204 255
+hardness: 250
+specular_comp: 1
+reflect_comp: 0.2
+ior: 1
+transparent_comp: 0.5
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+look: 2
+diffuse_colour: 0 0 0
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 250
+specular_comp: 1
+reflect_comp: 0
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+look: 0
+diffuse_colour: 0 0 0
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 250
+specular_comp: 1
+reflect_comp: 0.2
+ior: 1
+transparent_comp: 0
+texture_id: 1
+texture_size: 0
+texture_rot: 0
+
+light: distant
+area: 0 -1 0
+colour: 255 255 255
+intensity: 3
+
+light: distant
+area: -1 -1 -1
+colour: 255 255 255
+intensity: 10
+
+light: point
+area: -3 4 -7
+colour: 255 200 200
+intensity: 4000
+
+light: point
+area: 0.5 0.5 -13
+colour: 255 255 255
+intensity: 3500
+
+shape: sphere
+position: -4 -1 -15
+rotation: 90 90 90
+size: 1.5
+look_id: 1
+
+shape: sphere
+position: -3 0 -15
+rotation: 90 90 90
+size: 0.9
+look_id: 1
+
+shape: sphere
+position: -5 0 -15
+rotation: 90 90 90
+size: 0.9
+look_id: 1
+
+shape: sphere
+position: -4 -1 -13.5
+rotation: 90 90 90
+size: 0.3
+look_id: 2
+
+shape: sphere
+position: -4.40 -0.35 -13.8
+rotation: 90 90 90
+size: 0.2
+look_id: 3
+
+shape: sphere
+position: -3.70 -0.35 -13.8
+rotation: 90 90 90
+size: 0.2
+look_id: 3
+
+shape: plane
+position: 0 -2 -15
+rotation: 20 0 0
+size: 1
+look_id: 1
+

@@ -1,0 +1,120 @@
+options:
+fov: 60
+pix_height: 700
+pix_width: 1400
+aa: 4
+reflect_limit: 15
+camera_pos: 0 0 -180
+camera_rot: 0 180 0
+ambient_light: 0.2
+background: 0 0 0
+greyscale: 0
+
+look: 0
+diffuse_colour: 250 127 60
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 255 255 255
+hardness: 100
+specular_comp: 0
+reflect_comp: 0
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+look: 1
+diffuse_colour: 0 0 0
+albedo: 0.1
+diffuse_comp: 0.01
+specular_tint: 255 255 255
+hardness: 500
+specular_comp: 0.8
+reflect_comp: 0.9
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+look: 2
+diffuse_colour: 200 0 0
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 255 255 255
+hardness: 100
+specular_comp: 0.5
+reflect_comp: 0.1
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+look: 3
+diffuse_colour: 255 255 255
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 255 255 255
+hardness: 100
+specular_comp: 0.4
+reflect_comp: 0.1
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+shape: sphere
+position: -50 0 0
+rotation: 0 0 0
+size: 30
+look_id: 1
+
+shape: sphere
+position: 20 0 10
+rotation: 0 0 0
+size: 10
+look_id: 1
+
+shape: sphere
+position: 10 0 10
+rotation: 0 0 0
+size: 10
+look_id: 3
+
+shape: cone
+position: 50 -10 0
+rotation: 0 0 0
+size: 30
+look_id: 2
+
+shape: cone
+position: 0 0 30 
+rotation: 0 0 0
+size: 10
+look_id: 3
+
+shape: cone
+position: 0 0 30 
+rotation: 0 0 45 
+size: 20
+look_id: 2
+
+shape: cone
+position: 0 0 30 
+rotation: 0 0 -45 
+size: 10
+look_id: 3
+
+light: distant
+area: 20 0 120 
+colour: 25 25 20
+intensity: 35
+
+light: distant
+area: -20 0 120
+colour: 255 255 200
+intensity: 35
+
