@@ -10,8 +10,8 @@ private repo on Alex's GitHub.
 
 Alex’s GitHub is : https://github.com/AlexCoetzee
 
-To compile the program, you need SDL2, and Make installed on the system, then 
-you simply run make all. Once the program has been compiled, you can run it
+To compile the program, you need SDL2, and MakeFile installed on the system,
+then you simply run make all. Once the program has been compiled, you can run it
 with:
 
 ./RT file_name
