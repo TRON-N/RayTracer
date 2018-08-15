@@ -16,7 +16,9 @@ with:
 
 ./RT file_name
 
-The scene files are saved in the scene_files folder.
+The scene files are saved in the scene_files folder. My favorite scene is,
+pretty_ball_on_a_plane.txt, I think it shows off the best parts of this
+RayTracer.
 
 This program has been tested on OSX, and Ubuntu.
 
