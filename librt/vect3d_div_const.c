@@ -14,10 +14,10 @@
 
 t_vect3d	vect3d_div_const(const t_vect3d vect, const double r)
 {
-	t_vect3d	new;
+	t_vect3d	neww;
 
-	new.x_dist = vect.x_dist / r;
-	new.y_dist = vect.y_dist / r;
-	new.z_dist = vect.z_dist / r;
-	return (new);
+	neww.x_dist = vect.x_dist / r;
+	neww.y_dist = vect.y_dist / r;
+	neww.z_dist = vect.z_dist / r;
+	return (neww);
 }

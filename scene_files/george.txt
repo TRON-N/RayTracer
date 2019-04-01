@@ -1,0 +1,42 @@
+options:
+fov: 51.52
+pix_height: 500
+pix_width: 500
+aa: 2
+reflect_limit: 5
+camera_pos: 0 0 1
+camera_rot: 0 0 0
+ambient_light: 0.1
+background: 0 0 0
+greyscale: 0
+
+look: 1
+diffuse_colour: 137 26 111
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 250
+specular_comp: 1
+reflect_comp: 0.2
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+light: point
+area: 0 0 0
+colour: 255 255 255
+intensity: 4000
+
+shape: sphere
+position: 0 10 0
+rotation: 90 90 90
+size: 5
+look_id: 1
+
+shape: plane
+position: 0 0 0
+rotation: 0 0 0
+size: 1
+look_id: 1

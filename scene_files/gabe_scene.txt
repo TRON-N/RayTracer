@@ -1,8 +1,8 @@
 options:
-fov: 60
-pix_height: 700
-pix_width: 1400
-aa: 4
+fov: 75
+pix_height: 500
+pix_width: 500
+aa: 2
 reflect_limit: 15
 camera_pos: 0 0 -180
 camera_rot: 0 180 0

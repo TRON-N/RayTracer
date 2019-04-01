@@ -1,8 +1,8 @@
 options:
 fov: 51.52
-pix_height: 1080
-pix_width: 1920
-aa: 6
+pix_height: 900
+pix_width: 1600
+aa: 2
 reflect_limit: 5
 camera_pos: 0 0 10
 camera_rot: 0 0 0

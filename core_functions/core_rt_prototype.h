@@ -19,7 +19,7 @@
 # include "read_prototype.h"
 # include "col_prototype.h"
 # include "core_rt_struct.h"
-# include <pthread.h>
+// # include <pthread.h>
 # include <stdlib.h>
 # include "libft.h"
 # include <SDL.h>
@@ -27,8 +27,10 @@
 # include <sys/stat.h>
 # include <fcntl.h>
 # include <unistd.h>
+# include <stdio.h>
+# include <time.h>
 
-void					*start_primary_rays(void *info);
+int						start_primary_rays(void *info);
 int						init_buff(t_options *opts, t_colour ***buff);
 int						init_thread_info(t_thread_info thread_info[THREAD_NUM],
 		t_thread_info main_info, char *str);

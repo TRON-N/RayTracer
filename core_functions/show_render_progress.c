@@ -23,7 +23,7 @@ void	show_render_progress(t_thread_info thread_info[THREAD_NUM],
 	indx = 0;
 	progress = 0;
 	prev_progress = -1;
-	while (progress < 100)
+	while (progress < 99)
 	{
 		progress = 0;
 		while (indx < THREAD_NUM)
@@ -32,9 +32,14 @@ void	show_render_progress(t_thread_info thread_info[THREAD_NUM],
 			indx++;
 		}
 		progress = (progress * 100) * div;
+		// ft_putchar('\r');
+		// ft_putstr(ft_itoa(progress));
+		// ft_putstr("% ");
 		if (prev_progress != progress)
-			show_progress_bar(progress, "Rendering: ");
+			show_progress_bar(progress, "Rendering: ") ;
 		prev_progress = progress;
 		indx = 0;
 	}
+	// ft_putendl("\r100%");
+	ft_putendl("\n");
 }

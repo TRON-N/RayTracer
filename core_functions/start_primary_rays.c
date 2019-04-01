@@ -39,7 +39,7 @@ static void		set_fov_and_aspect_scale(double scale[2], t_options opts)
 	scale[1] = scale[0] * 1 / (opts.pix_width / opts.pix_height);
 }
 
-void			*start_primary_rays(void *info)
+int		start_primary_rays(void *info)
 {
 	t_point2d		rast;
 	t_point3d		pnt3d;
@@ -55,15 +55,22 @@ void			*start_primary_rays(void *info)
 		rast.x = th_info->min_w - 1.0;
 		while (++rast.x < th_info->max_w)
 		{
+			// int percent = (int)((float)((rast.x + (rast.y * th_info->opts.buff_width)) / (float)( th_info->max_w * th_info->opts.buff_height) ) * 100); 
+			
 			pnt3d.x = (2 * (rast.x + 0.5) /
 				(th_info->opts.buff_width) - 1) * scale_f_a[0];
+			
 			pnt3d.y = (1 - 2 * ((rast.y + 0.5) /
 				(th_info->opts.buff_height))) * scale_f_a[1];
+			
 			ray = set_ray(pnt3d, th_info->opts);
 			th_info->buff[(int)rast.y][(int)rast.x] =
 			find_colour(ray, (th_info->scene_info));
 		}
 		(th_info->progress)++;
 	}
-	return (NULL);
+	// puts("Thread Completed");
+	// Remove this from the list of running threads
+	SDL_SemWait(th_info->sem);
+	return 1;
 }

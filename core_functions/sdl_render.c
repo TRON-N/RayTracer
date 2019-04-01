@@ -47,8 +47,8 @@ int	sdl_render(t_colour **buff, t_options opts)
 
 	if (0 > SDL_Init(SDL_INIT_TIMER | SDL_INIT_VIDEO))
 		ft_putstr("error\n");
-	win = SDL_CreateWindow("RayTracer", SDL_WINDOWPOS_CENTERED,
-			SDL_WINDOWPOS_CENTERED, opts.pix_width, opts.pix_height,
+	win = SDL_CreateWindow("RayTracer", SDL_WINDOWPOS_UNDEFINED,
+			SDL_WINDOWPOS_UNDEFINED, opts.pix_width, opts.pix_height,
 			SDL_WINDOW_RESIZABLE);
 	win_surf = SDL_GetWindowSurface(win);
 	img = SDL_CreateRGBSurface(0, opts.pix_width, opts.pix_height,
