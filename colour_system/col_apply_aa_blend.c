@@ -18,13 +18,13 @@ void	col_apply_aa_blend(t_colour **buff, t_options opts, t_colour **buff2)
 	const double	div = 1 / (opts.buff_height);
 	int				progress;
 	int				prev_progress;
-	t_colour		**buffers[2];
+	// t_colour		**buffers[2];
 
 	rast.y = -1;
 	prev_progress = -1;
 	progress = 0;
-	buffers[0] = buff;
-	buffers[1] = buff2;
+	// buffers[0] = buff;
+	// buffers[1] = buff2;
 	while (++rast.y < opts.buff_height)
 	{
 		progress = (int)((rast.y * 100) * div);

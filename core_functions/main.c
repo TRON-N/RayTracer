@@ -21,10 +21,8 @@ int		error_checks(t_thread_info *main_info, int argc, char **argv,
 		t_colour ***buff2)
 {
 	int i;
-	int j;
 
 	i = -1;
-	j = -1;
 	if (argc != 2)
 	{
 		ft_putendl("No file given, usage: ./RT file");
@@ -54,30 +52,48 @@ int		error_checks(t_thread_info *main_info, int argc, char **argv,
 	return (1);
 }
 
-int		main(int argc, char **argv)
-{
+int		main(int argc, char **argv) {
+	SDL_sem			*sem;
 	t_thread_info	main_info;
 	t_thread_info	thread_info[THREAD_NUM];
-	pthread_t		thread[THREAD_NUM];
+	SDL_Thread		*thread[THREAD_NUM];
 	t_colour		**buff2;
 	int				indx;
 
+	sem = SDL_CreateSemaphore(0);
+
 	indx = -1;
+	ft_putendl("Initilizing Ray Tracer");
 	if (error_checks(&main_info, argc, argv, &buff2) == -1)
 		return (0);
 	if (init_thread_info(thread_info, main_info, argv[1]) == -1)
 		return (0);
-	while (++indx < THREAD_NUM)
-		pthread_create(&thread[indx], NULL,
-			&start_primary_rays, (void *)&thread_info[indx]);
+	
+	printf("Creating %i threads\n", THREAD_NUM);
+	while (++indx < THREAD_NUM) {
+		// Increment Semaphore
+		SDL_SemPost(sem);
+		// Add Semaphore information so we can remove this thread from it later
+		(thread_info[indx]).sem = sem;
+		thread[indx] = SDL_CreateThread( start_primary_rays, ft_itoa(indx), &thread_info[indx] );
+	}
+
 	show_render_progress(thread_info, main_info.opts);
+	int *ret[THREAD_NUM];
 	indx = -1;
-	while (++indx < THREAD_NUM)
-		pthread_join(thread[indx], NULL);
+	
+	// Wait until Semaphore value is 0 before moving on
+	while ( SDL_SemValue(sem) > 0) {
+		SDL_Delay(1);
+	}
+	
+	buff2 = main_info.buff;
 	if (main_info.opts.aa > 1)
 		col_apply_aa_blend(main_info.buff, main_info.opts, buff2);
 	dither_buff(main_info.opts, buff2, &quant);
-	ft_putstr("\nFINISHED\n");
+	ft_putstr("\nFinished\n");
+	
+	SDL_DestroySemaphore(sem);
 	sdl_render(buff2, main_info.opts);
-	return (0);
+	return 0;
 }

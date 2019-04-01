@@ -16,9 +16,7 @@ int	col_sphere_texture(t_intsect_info *i_info)
 {
 	if (i_info->obj_id == SPHERE && i_info->look.tex_size > 0)
 	{
-		if ((fmod(fabs(i_info->uv.x * i_info->look.tex_size), 1) >
-			0.5 ^ fmod(fabs(i_info->uv.y *
-				i_info->look.tex_size), 1) > 0.5))
+		if (( (fmod(fabs(i_info->uv.x * i_info->look.tex_size), 1) > 0.5 ) ^ ( fmod(fabs(i_info->uv.y * i_info->look.tex_size), 1) > 0.5)) )
 			i_info->look = col_tex_to_look(i_info->look.tex);
 		return (1);
 	}

@@ -22,12 +22,12 @@ static void	set_zero(int ret[4])
 
 static void	init_key_words(char *key_words[6])
 {
-	key_words[0] = "sphere";
-	key_words[1] = "plane";
-	key_words[2] = "cone";
-	key_words[3] = "cylinder";
-	key_words[4] = "cube";
-	key_words[5] = "over";
+	key_words[0] =  "sphere";
+	key_words[1] =  "plane";
+	key_words[2] =  "cone";
+	key_words[3] =  "cylinder";
+	key_words[4] =  "cube";
+	key_words[5] =  "over";
 }
 
 static int	set_look(int look_id, t_scene_info *info, t_shape_look *look)
@@ -73,11 +73,11 @@ int			read_shape(int fd, char *line, t_scene_info *info)
 {
 	char			*shapes[6];
 	int				id;
-	int				ret[4];
+	// int				ret[4];
 	t_shape_c_info	sh_info;
 
 	id = 0;
-	ret[1] = 1;
+	// ret[1] = 1;
 	init_key_words(shapes);
 	while (id < 6)
 	{

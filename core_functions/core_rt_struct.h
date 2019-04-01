@@ -14,7 +14,7 @@
 # define CORE_RT_STRUCT_H
 # include "librt.h"
 # include "libobj.h"
-# define THREAD_NUM 6
+# define THREAD_NUM 8
 # define LOOK_NUM 5
 
 typedef struct	s_options
@@ -39,6 +39,10 @@ typedef	struct	s_scene_info
 	t_object		*obj_list[2];
 	t_shape_look	look[LOOK_NUM];
 }				t_scene_info;
+
+// SDL Semaphore
+# include <SDL.h>
+
 typedef	struct	s_thread_info
 {
 	t_colour		**buff;
@@ -47,5 +51,6 @@ typedef	struct	s_thread_info
 	double			min_w;
 	double			max_w;
 	int				progress;
+	SDL_sem			*sem;
 }				t_thread_info;
 #endif

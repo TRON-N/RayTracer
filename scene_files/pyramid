@@ -1,0 +1,193 @@
+options:
+fov: 75
+pix_height: 1080
+pix_width:  1920
+aa: 4
+reflect_limit: 1
+camera_pos: 0 0 55
+camera_rot: 0 0 0
+ambient_light: 0.1
+background: 0 0 255
+greyscale: 0
+
+look: 0
+diffuse_colour: 0 0 255
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 250
+specular_comp: 1
+reflect_comp: 0.2
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+look: 1
+diffuse_colour: 0 255 0
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 250
+specular_comp: 1
+reflect_comp: 0.2
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+look: 2
+diffuse_colour: 255 0 0
+albedo: 0.1
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 250
+specular_comp: 1
+reflect_comp: 0.2
+ior: 1
+transparent_comp: 0
+texture_id: 1
+texture_size: 0
+texture_rot: 0
+
+look: 3
+diffuse_colour: 0 0 255
+albedo: 0.2
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 500
+specular_comp: 1
+reflect_comp: 0.1
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+look: 4
+diffuse_colour: 0 0 255
+albedo: 0.2
+diffuse_comp: 1
+specular_tint: 201 162 36
+hardness: 5000
+specular_comp: 1
+reflect_comp: 0.1
+ior: 1
+transparent_comp: 0
+texture_id: 0
+texture_size: 0
+texture_rot: 0
+
+light: point
+area: 0 50 -30
+colour: 255 255 255
+intensity: 8000
+
+light: point
+area: 0 15 -25
+colour: 255 255 255
+intensity: 80000
+
+light: point
+area: 0 15 -55
+colour: 255 255 255
+intensity: 800000
+
+shape: plane
+position: 0 -2 -15
+rotation: 0 0 0
+size: 1
+look_id: 4
+
+shape: plane
+position: 0 0 -85
+rotation: 90 0 0
+size: 1
+look_id: 3
+
+shape: sphere
+position: 0 0 -40
+rotation: 0 0 0
+size: 5
+look_id: 0
+
+shape: sphere
+position: 0 0 -30
+rotation: 0 0 0
+size: 5
+look_id: 0
+
+shape: sphere
+position: 0 0 -20
+rotation: 0 0 0
+size: 5
+look_id: 0
+
+shape: sphere
+position: 10 0 -40
+rotation: 0 0 0
+size: 5
+look_id: 0
+
+shape: sphere
+position: 10 0 -30
+rotation: 0 0 0
+size: 5
+look_id: 0
+
+shape: sphere
+position: 10 0 -20
+rotation: 0 0 0
+size: 5
+look_id: 0
+
+shape: sphere
+position: -10 0 -40
+rotation: 0 0 0
+size: 5
+look_id: 0
+
+shape: sphere
+position: -10 0 -30
+rotation: 0 0 0
+size: 5
+look_id: 0
+
+shape: sphere
+position: -10 0 -20
+rotation: 0 0 0
+size: 5
+look_id: 0
+
+shape: sphere
+position: 5 10 -35
+rotation: 0 0 0
+size: 5
+look_id: 1
+
+shape: sphere
+position: -5 10 -35
+rotation: 0 0 0
+size: 5
+look_id: 1
+
+shape: sphere
+position: 5 10 -25
+rotation: 0 0 0
+size: 5
+look_id: 1
+
+shape: sphere
+position: -5 10 -25
+rotation: 0 0 0
+size: 5
+look_id: 1
+
+shape: sphere
+position: 0 20 -30
+rotation: 0 0 0
+size: 5
+look_id: 2
+
